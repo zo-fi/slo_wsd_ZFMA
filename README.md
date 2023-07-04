@@ -31,8 +31,8 @@ _wsd_data_ --> Contains .csv files used to create Slovene dfs with sentence comb
 
 
 [1] 
-To load the basic CSE BERT used in training, follow the instructions on at [https://huggingface.co/EMBEDDIA/crosloengual-bert]
+To load the basic CSE BERT used in training, follow the instructions on at [https://huggingface.co/EMBEDDIA/crosloengual-bert].
 
 [2]
-Not included in this repo. See http://lcl.uniroma1.it/wsdeval/training-data or similar. I did encounter issues with some XML files for this collection (missing head tags that need to be added manually).
+Not included in this repo. See http://lcl.uniroma1.it/wsdeval/training-data or similar. I did encounter issues with some XML files for this collection (missing head tags that needed to be added manually so Python would parse the XML).
 
