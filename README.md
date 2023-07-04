@@ -30,6 +30,7 @@ _wsd_data_ --> Contains .csv files used to create Slovene dfs with sentence comb
 
 
 
+Further links:
 [1] 
 To load the basic CSE BERT used in training, follow the instructions on at [https://huggingface.co/EMBEDDIA/crosloengual-bert].
 
