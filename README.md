@@ -29,8 +29,8 @@ _testing.ipynb_ --> notebook with testing procedures. Uses .csv files of predict
 _wsd_data_ --> Contains .csv files used to create Slovene dfs with sentence combinations. Also a complementary OOV df.
 
 
+**Further links**:
 
-Further links:
 [1] 
 To load the basic CSE BERT used in training, follow the instructions on at [https://huggingface.co/EMBEDDIA/crosloengual-bert].
 
