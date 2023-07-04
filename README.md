@@ -3,19 +3,22 @@
 This repo contains code and datasets related to a MA thesis on Eng/Slo WSD NLP. A detailed description of the project can be found at [thesis_link].
 
 1. Use Ideas
+   
 The repo will not work out of the box, since the trained models and datasets are larger than GitHub's preferences [1]. Some training files were reused multiple times. The folder structure is different than in its development environment (remote server). However, some code may be of use for similar NLP projects such as BERT training with layer freezing, MFS prediction or model comparison frameworks.
 
 2. Context
-For the MA, we trained a WSD model for Slovene with limited coverage (4633 senses for 1597 lemmas). The training was done by combining existing sentences into a combo_df with (non)matching sentence pairs (no sense definitions were used). A mixed SLO-ENG train dataset was also used effectively. A complementary out-of-vocabulary DF was used and we found a (non-significant) drop in OOV performance with larger training sets.
+   
+For the MA, we trained a WSD model for Slovene with limited coverage (4633 senses for 1597 lemmas). The training was done by combining existing sentences into a combo_df with (non)matching sentence pairs (no sense definitions were used). A mixed SLO-ENG train dataset was also used effectively. A complementary out-of-vocabulary DF was used and we found a (non-significant) drop in OOV performance with larger training sets. Training was done using a 16 GB GPU, taking around 4 hours per model (depending on the number of included sentence combinations).
 
-3. Folder overview
+3. Repo overview
+   
 hyperparam_srch.py --> hyperparameter optimization with Optuna on a smaller train_df
 model_train.py --> basic training loop with layer freezing
 binhead_predictions.py --> sent_pairs to sentence matching (0/1) and match propbability (softmax)
 nn_predictions.py --> nearest neighbor predictions between test_df sentences and (simple) sense embeddings from train & val_df sentences
 preprocessing.ipynb --> Notebook with procedures relating to data cleaning, filtering and generating combo_dfs.
 semcor2sent_pairs.py --> helper script for generating sentence pairs from SemCor [2] 
-testing.ipynb --> Notebook with testing procedures. Uses .csv files of predictions for multiple models rather than evaluating each model individually.
+testing.ipynb --> Notebook with testing procedures. Uses .csv files of predictions from multiple models rather than evaluating each model individually.
 wsd_data --> Contains .csv files used to create Slovene dfs with sentence combinations. Also a complementary OOV df.
 
 [1] 
