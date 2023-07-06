@@ -28,7 +28,7 @@ We trained a WSD model for Slovene with limited coverage (4,633 senses for 1,597
    
 _hyperparam_srch.py_ --> hyperparameter optimization with Optuna using a smaller train dataset
 
-_model_train.py _--> basic training loop with layer freezing
+_model_train.py_--> basic training loop with layer freezing
 
 _binhead_predictions.py_ --> sentence pair to sense match predictions (binary) and softmax (probability)
 
