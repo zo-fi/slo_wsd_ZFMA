@@ -7,9 +7,12 @@ This repo contains code and datasets related to a MA thesis on Eng/Slo WSD NLP. 
 The repo will not work out of the box, since the trained models and datasets are larger than GitHub's preferences. Some support scripts were reused multiple times. The folder structure is different than in its development environment (remote server). However, some code may be of use for similar NLP projects such as BERT training with layer freezing, most-frequent-sense prediction or model comparison frameworks. The repo includes a heavily filtered and cleaned slovene WSD collection and a complementary out-of-vocabulary collection. The two most successful models can have been uploaded to Huggingface Hub and can be retrieved with the commands below:
 ```
 from transformers import AutoModel, AutoTokenizer
+
 tokenizer = AutoTokenizer.from_pretrained("zo-fi/sloWSD_100slo")
 model = AutoModel.from_pretrained("zo-fi/sloWSD_100slo")
+
 #or
+
 tokenizer = AutoTokenizer.from_pretrained("zo-fi/sloWSD_20mix")
 model = AutoModel.from_pretrained("zo-fi/sloWSD_20mix")
 ```
