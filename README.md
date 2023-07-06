@@ -16,7 +16,7 @@ _hyperparam_srch.py_ --> hyperparameter optimization with Optuna on a smaller tr
 
 _model_train.py _--> basic training loop with layer freezing
 
-_binhead_predictions.py_ --> sent_pairs to sentence matching (0/1) and match propbability (softmax)
+_binhead_predictions.py_ --> sentence pair to sense match predictions (binary) and softmax (probability)
 
 _nn_predictions.py_ --> nearest neighbor predictions between test_df sentences and (simple) sense embeddings from train & val_df sentences
 
