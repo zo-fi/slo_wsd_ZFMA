@@ -4,7 +4,17 @@ This repo contains code and datasets related to a MA thesis on Eng/Slo WSD NLP. 
 
 1. Use Ideas
    
-The repo will not work out of the box, since the trained models and datasets are larger than GitHub's preferences [1]. Some training files were reused multiple times. The folder structure is different than in its development environment (remote server). However, some code may be of use for similar NLP projects such as BERT training with layer freezing, MFS prediction or model comparison frameworks. Includes heavily filtered slovene WSD collection and a complementary out-of-vocabulary collection.
+The repo will not work out of the box, since the trained models and datasets are larger than GitHub's preferences [1]. Some training files were reused multiple times. The folder structure is different than in its development environment (remote server). However, some code may be of use for similar NLP projects such as BERT training with layer freezing, MFS prediction or model comparison frameworks. Includes heavily filtered slovene WSD collection and a complementary out-of-vocabulary collection. The two most successful models can have been uploaded to Huggingface Hub and can be retrieved with the command below:
+```
+from transformers import AutoModel, AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained("zo-fi/sloWSD_100slo")
+model = AutoModel.from_pretrained("zo-fi/sloWSD_100slo")
+#or
+tokenizer = AutoTokenizer.from_pretrained("zo-fi/sloWSD_20mix")
+model = AutoModel.from_pretrained("zo-fi/sloWSD_20mix")
+```
+See hugginface_hub documentation for additional information [3]. Loading the models does not require a Huggingface Hub account.
+
 
 2. Context
    
@@ -36,4 +46,7 @@ To load the basic CSE BERT used in training, follow the instructions at [https:/
 
 [2]
 Not included in this repo. See http://lcl.uniroma1.it/wsdeval/training-data or similar. I did encounter issues with some XML files for this collection (missing head tags that needed to be added manually so Python would parse the XML).
+[3]
+https://huggingface.co/docs/huggingface_hub/quick-start
+
 
