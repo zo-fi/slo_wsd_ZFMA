@@ -47,6 +47,7 @@ _wsd_data_ --> Contains .csv files used to create Slovene datasets of sentence c
 
 [1]
 https://huggingface.co/docs/huggingface_hub/quick-start
+
 [2]
 Not included in this repo. See [http://lcl.uniroma1.it/wsdeval/training-data] or similar. I did encounter issues with some XML files for in some versions of SemCor (missing head tags that needed to be replaced manually before parsing in Python works).
 
