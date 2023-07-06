@@ -20,7 +20,7 @@ See Hugging Face Hub  documentation for additional options [1]. Loading the mode
 
 2. Context
    
-We trained a WSD model for Slovene with limited coverage (4633 senses for 1597 lemmas). The training was done by combining existing sentences into a combo_df with (non)matching sentence pairs (no sense definitions were used). A mixed SLO-ENG train dataset was also used effectively. A complementary out-of-vocabulary dataset was used and we found a (non-significant) drop in OOV performance with larger training sets. Training was done using a 16 GB GPU, taking around 4 hours per model (depending on the number of included sentence combinations; enabled by layer freezing, using limited tokenizer size and gradient accumulation steps). Using _tmux_ was invaluable to avoid interruptions during training.
+We trained a WSD model for Slovene with limited coverage (4,633 senses for 1,597 lemmas). The training was done by combining existing sentences into a combo_df with (non)matching sentence pairs (no sense definitions were used). A mixed SLO-ENG train dataset was also used effectively. A complementary out-of-vocabulary dataset was used and we found a (non-significant) drop in OOV performance with larger training sets. Training was done using a 16 GB GPU, taking around 4 hours per model (depending on the number of included sentence combinations; enabled by layer freezing, using limited tokenizer size and gradient accumulation steps). Using _tmux_ was invaluable to avoid interruptions during training.
 
 3. Repo overview
    
