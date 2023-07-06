@@ -6,7 +6,7 @@ This repo contains code and datasets related to a MA thesis on Eng/Slo WSD NLP. 
    
 The repo will not work out of the box, since the trained models and datasets are larger than GitHub's preferences. Some support scripts were reused multiple times. The folder structure is different than in its development environment (remote server). However, some code may be of use for similar NLP projects, such as BERT training with layer freezing, model comparison frameworks or WSD-specific code. The repo includes a heavily filtered and cleaned slovene WSD collection and a complementary out-of-vocabulary collection. The two most successful models can have been uploaded to Huggingface Hub and can be retrieved with the commands below:
 ```
-from transformers import AutoModel, AutoTokenizer
+from transformers import AutoModel, AutoTokenizer, BertForSequenceClassification
 
 tokenizer = AutoTokenizer.from_pretrained("zo-fi/sloWSD_100slo")
 model = AutoModel.from_pretrained("zo-fi/sloWSD_100slo")
@@ -15,8 +15,10 @@ model = AutoModel.from_pretrained("zo-fi/sloWSD_100slo")
 
 tokenizer = AutoTokenizer.from_pretrained("zo-fi/sloWSD_20mix")
 model = AutoModel.from_pretrained("zo-fi/sloWSD_20mix")
+#or BertForSequenceClassification.from_pretrained() if used for sense discrimination in sentence pairs with a common lemma.
 ```
 See Hugging Face Hub  documentation for additional options [1]. Loading the models does not require a Hugging Face account. To load the basic CSE BERT used in training, follow the instructions at [https://huggingface.co/EMBEDDIA/crosloengual-bert].
+The basic model 
 
 2. Context
    
