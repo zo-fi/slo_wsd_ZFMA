@@ -18,7 +18,6 @@ model = AutoModel.from_pretrained("zo-fi/sloWSD_20mix")
 #or BertForSequenceClassification.from_pretrained() if used for sense discrimination in sentence pairs with a common lemma.
 ```
 See Hugging Face Hub  documentation for additional options [1]. Loading the models does not require a Hugging Face account. To load the basic CSE BERT used in training, follow the instructions at [https://huggingface.co/EMBEDDIA/crosloengual-bert].
-The basic model 
 
 2. Context
    
